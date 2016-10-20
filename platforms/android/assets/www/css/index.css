@@ -1,0 +1,181 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face{
+	font-family: 'Economica';
+	src: url("./fonts/Economica/Economica-Regular.ttf") format('truetype');
+}
+
+@font-face{
+	font-family: 'Abel';
+	src: url("./fonts/Abel/Abel-Regular.ttf") format('truetype');
+}
+
+@font-face{
+	font-family: 'PT Sans Narrow';
+	src: url("./fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Regular.ttf") format('truetype');
+}
+
+@font-face{
+	font-family: 'Roboto Slab';
+	src: url("./fonts/Roboto_Slab/RobotoSlab-Regular.ttf") format('truetype');
+}
+
+@font-face{
+	font-family: 'Ubuntu';
+	src: url("./fonts/Ubuntu/Ubuntu-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+}
+
+// Rules for sizing the icon.
+.material-icons.md-16 { font-size: 16px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-14 { font-size: 14px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-28 { font-size: 28px; }
+.material-icons.md-32 { font-size: 32px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-42 { font-size: 42px; }
+.material-icons.md-44 { font-size: 44px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-50 { font-size: 50px; }
+.material-icons.md-52 { font-size: 52px; }
+.material-icons.md-62 { font-size: 62px; }
+.material-icons.md-64 { font-size: 64px; }
+.material-icons.md-61 { font-size: 61px; }
+.material-icons.md-220 { font-size: 220px; }
+
+.material-icons.md-dark { color: #78909C; }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-gray { color: #535A63; }
+.material-icons.md-gray.md-inactive { color: #585858; }
+
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:white;
+	font-family: 'Ubuntu', sans-serif;
+    font-size:16px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+.header {
+	box-shadow: #535A63 0px 0px 2px 1px;
+	color: white;
+	background-color: #DDD;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 0px none !important;
+	height: 50px;
+}
+
+.header.clean {
+	background-color: transparent !important;
+	box-shadow: 0px 0px 0px transparent !important;
+	color: #888 !important;
+}
+
+.header .left {
+	padding: 2px; 
+	float: left;
+}
+
+.header .left a {
+	border: 0px none !important;
+	box-shadow: 0px none !important;
+	text-shadow: 0px none !important;
+	background-color: transparent !imporatant;
+}
+
+.btn {
+	min-width: 65px;
+	max-width: 120px;
+    background-color: #DDD;
+    -webkit-box-shadow: 1px 2px 2px #666666;
+    -moz-box-shadow: 1px 2px 2px #666666;
+    box-shadow: 1px 2px 2px #666666;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    
+	font-family: 'Economica';
+    font-weight: bold;
+    color: #535A63;
+
+
+    font-size: 22px;
+    padding: 10px 15px;
+    text-decoration: none;
+	
+    border: 0 none !important;
+
+    text-align: center;
+    margin: 5px;
+	
+    text-transform: uppercase;
+}
+
+.btn:active {
+	opacity: 0.8;
+}

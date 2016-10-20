@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data:">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+		<!-- weinre --httpPort tuaporata --boundHost teu ip -->
+        <title>Hello World</title>
+		<script src="http://10.0.0.101:10000/target/target-script-min.js#anonymous"></script>
+
+        <script type="text/javascript">
+             window.onerror = function(message, url, lineNumber) {
+                  console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+             }
+        </script>
+    </head>
+    <body>
+        
+		<div id="left-panel"
+            data-position="left"
+            data-display="overlay"
+            data-theme="b"
+            data-dismissible="true"
+            data-position-fixed="true"
+            data-role="panel">
+            
+        </div>
+		
+		<div data-role="page" id="page-main">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" class="header clean">
+				<a href="#left-panel" class="left">
+					<i class="material-icons md-48 md-gray">&#xE5D2;</i>
+				</a>
+			</div>
+			<div data-role="content">
+				<a class="btn" href="#page-main1">Do Something</a>
+			</div>
+			<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+			</div>
+		</div>
+
+		<div data-role="page" id="page-main1">
+			<div class="headerChild">
+			</div>
+			<div data-role="content">
+				<div>page 2</div>
+			</div>
+			<div class="footerChild">
+			</div>
+		</div>
+		
+        <script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.mobile-1.4.5.min.js"></script>
+		
+        <script type="text/javascript" src="js/main.js"></script>
+		
+		
+		
+    </body>
+</html>
